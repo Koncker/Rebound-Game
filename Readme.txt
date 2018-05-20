@@ -21,6 +21,8 @@ Installation:
 
 Known Bugs:
 	- Song does not loop correctly as there is a break.
+	- Game is optimised for 4:3 aspect ratio, on Widescreen monitors hard to see the end of the level.
+	- Ball may get stuck in infinite vertical loop.
 
 Change Log:
 	- Sound Effects are still missing for some parts
