@@ -11,6 +11,8 @@ public class Brick : MonoBehaviour {
     private LevelManager levelManager;
     private bool isBreakable;
 
+    public AudioClip destroyed;
+
     void Start ()
     {
         // If it is breakable - it will appear here. Each brick if it is breakable.
@@ -20,6 +22,7 @@ public class Brick : MonoBehaviour {
         if (isBreakable)
         {
             breakableCount++;
+            Debug.Log(breakableCount);
         }
 
         // Here we are setting our Prefab to find GameObject of Type LevelManager - To find the script with this name.
@@ -30,7 +33,8 @@ public class Brick : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        // This puts the audiosource where the object is. This allows us to destroy the object and still have the audio playing.
+        AudioSource.PlayClipAtPoint(destroyed, transform.position);
         if (isBreakable) { 
             HandleHits();
         }
@@ -45,6 +49,7 @@ public class Brick : MonoBehaviour {
         if (timesHit >= maxHits)
         {
             breakableCount--; // Decrease breakableCount by 1 before it is destroyed.
+            Debug.Log(breakableCount);
             levelManager.BrickDestroyed(); // We tell LevelManager that a brick has been destroyed.
             Destroy(gameObject);
         }

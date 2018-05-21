@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour {
 
     private AudioSource impact;
 
-    bool hasStarted;
+    public bool hasStarted;
 
 	void Start () {
 
@@ -28,9 +28,15 @@ public class Ball : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Here we will add some randomness to the balls movement.
+        Vector2 tweak = new Vector2(Random.Range(0f, 0.2f), Random.Range(0f, 0.2f));
+//        print(tweak);
+
         if (hasStarted) { 
             impact.Play();
         }
+
+        ball.velocity += tweak;
     }
 
     void Update ()
