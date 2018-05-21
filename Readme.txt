@@ -22,10 +22,11 @@ Installation:
 Known Bugs:
 	- Song does not loop correctly as there is a break.
 	- Game is optimised for 4:3 aspect ratio, on Widescreen monitors hard to see the end of the level.
-	- Ball may get stuck in infinite vertical loop.
+
 
 Change Log:
-	- Sound Effects are still missing for some parts
+	- Ball no longer gets stuck in Vertical or Horizontal Loop
+	- Added 3rd and 4th Level
 
 All rights of this game are reserved to Vicky 'Koncker' Rajani
 
