@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class MusicPlayer : MonoBehaviour {
+public class PlayerLives : MonoBehaviour {
+    public int playerLives;
 
-    // This makes it so that there is only 1 of it. This is a singleton.
-    static MusicPlayer instance = null;
+    static PlayerLives instance = null;
+    public Text text;
 
-    // Use this for initialization
-    void Start ()
+    private void Start()
     {
-        // Since instance is null - We go to else ->. Now, since instance does not = null - It destroys itself. This will not happen in other scenes where it doesn't exist.
+        playerLives = 3;
+
         if (instance != null)
         {
             Destroy(gameObject);
@@ -22,5 +24,11 @@ public class MusicPlayer : MonoBehaviour {
             instance = this;
             GameObject.DontDestroyOnLoad(gameObject);
         }
-	}
+    }
+
+    public void LivesTextPrint()
+    {
+        text.text = "" + playerLives;
+    }
+
 }

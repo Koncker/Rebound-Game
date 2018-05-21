@@ -22,11 +22,10 @@ Installation:
 Known Bugs:
 	- Song does not loop correctly as there is a break.
 	- Game is optimised for 4:3 aspect ratio, on Widescreen monitors hard to see the end of the level.
-
+	- Player Lives being registered as 0.
 
 Change Log:
-	- Ball no longer gets stuck in Vertical or Horizontal Loop
-	- Added 3rd and 4th Level
+	- Added 3 lives to start of the game.
 
 All rights of this game are reserved to Vicky 'Koncker' Rajani
 

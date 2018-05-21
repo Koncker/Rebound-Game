@@ -46,7 +46,7 @@ public class Ball : MonoBehaviour {
         {
             // Here we keep the object static until we wish, by adding the position that we got above - Locks the ball relative to the paddle.
             this.transform.position = paddle.transform.position + paddleToBallVector;
-        
+
             // Wait for a mouse press to Launch.
             if (Input.GetMouseButtonDown(0))
             {

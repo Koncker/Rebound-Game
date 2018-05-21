@@ -22,7 +22,6 @@ public class Brick : MonoBehaviour {
         if (isBreakable)
         {
             breakableCount++;
-            Debug.Log(breakableCount);
         }
 
         // Here we are setting our Prefab to find GameObject of Type LevelManager - To find the script with this name.
@@ -68,11 +67,5 @@ public class Brick : MonoBehaviour {
         if (hitSprites[spriteIndex]) { // This code makes it so if we forget to add a sprite to the sprite index, it doesn't become invisible.
             this.GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
         }
-    }
-
-    // TODO Remove this Method once we can actually win!
-    void SimulateWin()
-    {
-        levelManager.LoadNextLevel();
     }
 }
