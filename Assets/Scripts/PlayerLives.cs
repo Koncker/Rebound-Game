@@ -28,7 +28,7 @@ public class PlayerLives : MonoBehaviour {
 
     public void LivesTextPrint()
     {
-        text.text = "" + playerLives;
+//        text.text = "" + playerLives;
     }
 
 }

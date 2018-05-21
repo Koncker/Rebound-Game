@@ -23,18 +23,17 @@ public class LoseCollider : MonoBehaviour {
             Destroy(lives);
             print("Triggered");
             levelManager.LoadLevel("Lose");
-            Debug.Log("Player Lost - Loading level");
             Destroy(trigger.gameObject);
             ball.hasStarted = false;
+            Brick.breakableCount = 0;
         }
 
         else
         {
-            Brick.breakableCount = 0;
             lives.playerLives--;
             lives.LivesTextPrint();
-            Debug.Log(lives.playerLives);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Brick.breakableCount = 0;
         } 
     }
 }

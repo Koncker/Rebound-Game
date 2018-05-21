@@ -25,7 +25,7 @@ Known Bugs:
 	- Player Lives being registered as 0.
 
 Change Log:
-	- Added 3 lives to start of the game.
+	- Minor Bug Fixes.
 
 All rights of this game are reserved to Vicky 'Koncker' Rajani
 
